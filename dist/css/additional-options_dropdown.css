@@ -1,0 +1,95 @@
+.additional-options__select {
+    position: relative;
+    padding: 13px 40px 13px 15px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'SF Pro Text', sans-serif;
+    border: 1px solid var(--grey200);
+    border-radius: 8px;
+    background-color: var(--grey50);
+
+
+    img {
+        position: absolute;
+        right: 11px;
+        top: calc(50% - 8px);
+        transition: transform .3s ease;
+    }
+}
+
+.additional-options__select.is-active {
+    img {
+        transform: rotate(180deg);
+    }
+}
+
+.additional-options__opt {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform .3s ease;
+    .checkmark {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        border: 1px solid var(--grey800);
+        border-radius: 4px;
+        background-color: var(--white);
+        background-image: url("../assets/icons/Check.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.additional-options__opt[hidden] {
+    display: block;
+    transform: scaleY(0);
+
+    .additional-options__label {
+        &:nth-child(2){
+            transform: translateY(-47px);
+        }
+        &:nth-child(3){
+            transform: translateY(-95px);
+        }
+        &:nth-child(4){
+            transform: translateY(-144px);
+        }
+    }
+}
+
+.additional-options__label {
+    position: relative;
+    padding: 12px 32px 12px 40px;
+    display: block;
+    width: 100%;
+    background-color: var(--azure150);
+    border-radius: 8px;
+    transform: translateY(0);
+    transition: transform .5s ease;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    input {
+        position: absolute;
+        height: 0;
+        width: 0;
+
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+.additional-options__label input:checked ~ .checkmark {
+    background-color: var(--azureDark);
+    border-color: var(--azureDark);
+}

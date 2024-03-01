@@ -7,5 +7,14 @@
         <symbol  id="tooltip" viewBox="0 0 16 16">
             <path d="M7.5 12.5C7.5 12.7761 7.72386 13 8 13C8.27614 13 8.5 12.7761 8.5 12.5H7.5ZM8.5 6.5C8.5 6.22386 8.27614 6 8 6C7.72386 6 7.5 6.22386 7.5 6.5H8.5ZM15 8C15 11.866 11.866 15 8 15V16C12.4183 16 16 12.4183 16 8H15ZM8 15C4.13401 15 1 11.866 1 8H0C0 12.4183 3.58172 16 8 16V15ZM1 8C1 4.13401 4.13401 1 8 1V0C3.58172 0 0 3.58172 0 8H1ZM8 1C11.866 1 15 4.13401 15 8H16C16 3.58172 12.4183 0 8 0V1ZM8 3.5V4.5C8.55229 4.5 9 4.05228 9 3.5H8ZM8 3.5H7C7 4.05228 7.44772 4.5 8 4.5V3.5ZM8 3.5V2.5C7.44772 2.5 7 2.94772 7 3.5H8ZM8 3.5H9C9 2.94772 8.55229 2.5 8 2.5V3.5ZM8.5 12.5V6.5H7.5V12.5H8.5Z" />
         </symbol>
+        <symbol  id="chevron_left" viewBox="0 0 16 16"  fill="none">
+            <path d="M11 1L4.70711 7.29289C4.31658 7.68342 4.31658 8.31658 4.70711 8.70711L11 15" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol  id="chevron_right" viewBox="0 0 16 16" fill="none">
+            <path d="M5 1L11.2929 7.29289C11.6834 7.68342 11.6834 8.31658 11.2929 8.70711L5 15" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol  id="chevron_down" viewBox="0 0 16 16" fill="none">
+            <path d="M11.25 3.75L6.70711 8.29289C6.31658 8.68342 5.68342 8.68342 5.29289 8.29289L0.75 3.75" stroke="#424849" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
     </defs>
 </svg>
