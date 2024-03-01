@@ -51,3 +51,22 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* my custom resets */
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}

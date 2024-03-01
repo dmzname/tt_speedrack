@@ -1,0 +1,80 @@
+.conveyor-belt {
+    margin-bottom: 13px;
+}
+
+.conveyor-belt__width-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(-8px);
+
+    .checkmark {
+        display: inline-block;
+        text-align: center;
+
+        font-weight: 700;
+        line-height: 44px;
+        text-transform: uppercase;
+
+        color: var(--grey900);
+        border-radius: 8px;
+        background-color: var(--azure150);
+    }
+}
+
+.conveyor-belt__width {
+    position: relative;
+    margin: 8px 0;
+    cursor: pointer;
+
+
+    &:not(:last-child) {
+        margin-right: 16px;
+
+        .checkmark {
+            padding-left: 4px;
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &:last-child {
+        .checkmark {
+            padding: 0 20px;
+        }
+    }
+
+}
+
+.conveyor-belt__width input {
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    display: inline-block;
+    text-align: center;
+
+    font-weight: 700;
+    line-height: 44px;
+    text-transform: uppercase;
+
+    color: var(--grey900);
+    border-radius: 8px;
+    background-color: var(--azure150);
+}
+
+@media (hover: hover) {
+    .conveyor-belt__width:hover input ~ .checkmark {
+        background-color: var(--azure550);
+        color: var(--white);
+    }
+}
+
+.conveyor-belt__width input:checked ~ .checkmark {
+    background-color: var(--azureDark);
+    color: var(--white);
+}
