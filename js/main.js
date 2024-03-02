@@ -25,19 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const input = document.querySelector(`input[name="${fieldName}"]`);
         const step = input.dataset.step;
         const currentVal = parseInt(input.value);
+        const inch = !fieldName.includes('price') ? '″' : '';
 
         if (!isNaN(currentVal)) {
             input.value = (quantityType === 'plus')
-                ? (currentVal + (1*step)) + '"'
-                : Math.max(currentVal - (1*step), step ? step : 0) + '"';
+                ? (currentVal + (1*step)) + inch
+                : Math.max(currentVal - (1*step), 0) + inch;
         } else {
-            input.value = step ? (1*step) + '"' : 0  + '"';
+            input.value = step ? (1*step) + inch : 0  + inch;
         }
     }
 
 // CustomConveyor Belt Width is visible or not
     const inputContainers = document.querySelectorAll('.conveyor-belt__width');
-    const custom = document.querySelector('.conveyor-belt .plus-minus-field');
+    const custom = document.querySelector('.conveyor-belt .plus-minus');
 
     inputContainers.forEach(container => {
         const input = container.querySelector('input');

@@ -1,5 +1,7 @@
 :root {
     /* COLORS */
+    --accent-color: #F1582B;
+
     --azure150: #E0ECF0;
     --azure550: #3FB4D7;
     --azureDark: #146B87;
@@ -9,6 +11,7 @@
     --grey50: #F2F5F5;
     --grey100: #ECF2F3;
     --grey200: #D6DCDD;
+    --grey400: #A5B1B2;
     --grey600: #697071;
     --grey800: #424849;
     --grey900: #292E2F;
