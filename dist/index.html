@@ -73,110 +73,165 @@
             </div>
         </div>
         <div class="product__info info">
-            <div class="info__conveyor-belt-width conveyor-belt">
-                <h4 class="conveyor-belt__title info__details-title">
-                    Conveyor Belt Width, in
-                    <button type="button" class="conveyor-belt__tooltip info__tooltip">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#tooltip" /></svg>
-                    </button>
-                </h4>
-                <div class="conveyor-belt__width-wrapper">
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width" checked>
-                        <span class="checkmark">10”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">18”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">24”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">30”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">36”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">42”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">48”</span>
-                    </label>
-                    <label class="conveyor-belt__width">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">54”</span>
-                    </label>
-                    <label class="conveyor-belt__width conveyor-belt__width_custom">
-                        <input type="radio" name="conveyor-belt-width">
-                        <span class="checkmark">Custom</span>
-                    </label>
+            <div class="info__params">
+                <div class="info__conveyor-belt-width conveyor-belt">
+                    <h4 class="conveyor-belt__title info__details-title">
+                        Conveyor Belt Width, in
+                        <button type="button" class="conveyor-belt__tooltip info__tooltip">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#tooltip" /></svg>
+                        </button>
+                    </h4>
+                    <div class="conveyor-belt__width-wrapper">
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width" checked>
+                            <span class="checkmark">10”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">18”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">24”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">30”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">36”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">42”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">48”</span>
+                        </label>
+                        <label class="conveyor-belt__width">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">54”</span>
+                        </label>
+                        <label class="conveyor-belt__width conveyor-belt__width_custom">
+                            <input type="radio" name="conveyor-belt-width">
+                            <span class="checkmark">Custom</span>
+                        </label>
+                    </div>
+                    <div class="conveyor-belt__plus-minus plus-minus" hidden>
+                        <button type="button" class="plus-minus__btn plus-minus__btn_minus" data-quantity="minus" data-field="cbw-quantity">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_left" /></svg>
+                        </button>
+                        <input class="plus-minus__input" type="text" name="cbw-quantity" value='1″' data-step="1" readonly>
+                        <button type="button" class="plus-minus__btn plus-minus__btn_plus" data-quantity="plus" data-field="cbw-quantity">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_right" /></svg>
+                        </button>
+                    </div>
                 </div>
-                <div class="conveyor-belt__plus-minus-field plus-minus-field" hidden>
-                    <button type="button" class="plus-minus-field__btn plus-minus-field__btn_minus" data-quantity="minus" data-field="cbw-quantity">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_left" /></svg>
+                <div class="info__bed-section bed-section">
+                    <h4 class="bed-section__title info__details-title">
+                        Bed Section Length, in
+                        <button type="button" class="bed-section__tooltip info__tooltip">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#tooltip" /></svg>
+                        </button>
+                    </h4>
+                    <div class="bed-section__plus-minus plus-minus">
+                        <button type="button" class="plus-minus__btn plus-minus__btn_minus" data-quantity="minus" data-field="bsl-quantity">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_left" /></svg>
+                        </button>
+                        <input class="plus-minus__input" type="text" name="bsl-quantity" value='10″' data-step="10" readonly>
+                        <button type="button" class="plus-minus__btn plus-minus__btn_plus" data-quantity="plus" data-field="bsl-quantity">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_right" /></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="info__additional-options additional-options">
+                    <h4 class="additional-options__title info__details-title">
+                        Additional options
+                        <button type="button" class="additional-options__tooltip info__tooltip">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#tooltip" /></svg>
+                        </button>
+                    </h4>
+                    <button type="button" class="additional-options__select">
+                        Select options
+                        <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_down"/></svg>
                     </button>
-                    <input class="plus-minus-field__input" type="text" name="cbw-quantity" value='1"' data-step="1" readonly>
-                    <button type="button" class="plus-minus-field__btn plus-minus-field__btn_plus" data-quantity="plus" data-field="cbw-quantity">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_right" /></svg>
-                    </button>
+                    <div class="additional-options__opt" hidden>
+                        <label class="additional-options__label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Chain Driven Feeder
+                        </label>
+                        <label class="additional-options__label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Additional Support Structures
+                        </label>
+                        <label class="additional-options__label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Knee Braces
+                        </label>
+                        <label class="additional-options__label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Enhanced support
+                        </label>
+                    </div>
                 </div>
             </div>
-            <div class="info__bed-section bed-section">
-                <h4 class="bed-section__title info__details-title">
-                    Bed Section Length, in
-                    <button type="button" class="bed-section__tooltip info__tooltip">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#tooltip" /></svg>
+            <div class="info__order">
+                <div class="info__product-scu-rate scu-rate">
+                    <p class="scu-rate__scu" >
+                        <span>SKU: </span>WMD-2446F-GRYI
+                    </p>
+                    <button type="button" class="scu-rate__btn">
+                        <svg><use xlink:href="assets/icons/icons-sprite.svg#check" /></svg>
+                        Upon request
                     </button>
-                </h4>
-                <div class="bed-section__plus-minus-field plus-minus-field">
-                    <button type="button" class="plus-minus-field__btn plus-minus-field__btn_minus" data-quantity="minus" data-field="bsl-quantity">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_left" /></svg>
-                    </button>
-                    <input class="plus-minus-field__input" type="text" name="bsl-quantity" value='10"' data-step="10" readonly>
-                    <button type="button" class="plus-minus-field__btn plus-minus-field__btn_plus" data-quantity="plus" data-field="bsl-quantity">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_right" /></svg>
-                    </button>
+                    <div class="scu-rate__rating">
+                        <div class="scu-rate__stars">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#star" /></svg>
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#star" /></svg>
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#star" /></svg>
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#star" /></svg>
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#star" /></svg>
+                        </div>
+                        <span class="scu-rate__stats">
+                        (20)
+                    </span>
+                        <a href="#" class="scu-rate__link">
+                            <span>Read</span>
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#chevron_right" /></svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="info__additional-options additional-options">
-                <h4 class="additional-options__title info__details-title">
-                    Additional options
-                    <button type="button" class="additional-options__tooltip info__tooltip">
-                        <svg><use xlink:href="assets/icons/icons-sprite.svg#tooltip" /></svg>
-                    </button>
-                </h4>
-                <button type="button" class="additional-options__select">
-                    Select options
-                    <img src="assets/icons/Chevron_down.svg" alt="arrow-down">
-                </button>
-                <div class="additional-options__opt" hidden>
-                    <label class="additional-options__label">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Chain Driven Feeder
-                    </label>
-                    <label class="additional-options__label">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Additional Support Structures
-                    </label>
-                    <label class="additional-options__label">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Knee Braces
-                    </label>
-                    <label class="additional-options__label">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Enhanced support
-                    </label>
+                <div class="info__price price">
+                    <div class="price__preliminary">
+                        <span>from</span>
+                        $22360
+                        <span>ea</span>
+                        <sub>*</sub>
+                    </div>
+                    <p class="price__description">
+                        *Final price is defined after a consultation with our specialist due to conveyor specifics of use.
+                    </p>
+                    <form class="price__form">
+                        <div class="price__plus-minus plus-minus">
+                            <button type="button" class="plus-minus__btn plus-minus__btn_minus" data-quantity="minus" data-field="price-quantity">
+                                <svg><use xlink:href="assets/icons/icons-sprite.svg#minus" /></svg>
+                            </button>
+                            <input class="plus-minus__input" type="text" name="price-quantity" value='1' data-step="1" readonly>
+                            <button type="button" class="plus-minus__btn plus-minus__btn_plus" data-quantity="plus" data-field="price-quantity">
+                                <svg><use xlink:href="assets/icons/icons-sprite.svg#plus" /></svg>
+                            </button>
+                        </div>
+                        <button type="submit" class="price__submit-btn">
+                            <svg><use xlink:href="assets/icons/icons-sprite.svg#flag" /></svg>
+                            Request
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

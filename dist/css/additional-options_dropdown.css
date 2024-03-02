@@ -1,7 +1,10 @@
+.additional-options {
+    padding: 0 20px;
+}
+
 .additional-options__select {
     position: relative;
     padding: 13px 40px 13px 15px;
-    margin-bottom: 40px;
     width: 100%;
     text-align: left;
     font-size: 14px;
@@ -11,24 +14,30 @@
     background-color: var(--grey50);
 
 
-    img {
+    svg {
         position: absolute;
-        right: 11px;
-        top: calc(50% - 8px);
+        right: 15px;
+        top: calc(50% - 6px);
+        width: 12px;
+        height: 12px;
         transition: transform .3s ease;
     }
 }
 
 .additional-options__select.is-active {
-    img {
+    svg {
         transform: rotate(180deg);
     }
 }
 
 .additional-options__opt {
+    margin-top: 20px;
+    height: auto;
+
     transform: scaleY(1);
     transform-origin: top;
-    transition: transform .3s ease;
+    transition: transform .2s ease;
+
     .checkmark {
         position: absolute;
         left: 12px;
@@ -49,6 +58,9 @@
 }
 
 .additional-options__opt[hidden] {
+    margin-top: 0;
+    height: 0;
+
     display: block;
     transform: scaleY(0);
 

@@ -1,0 +1,44 @@
+.plus-minus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &[hidden] {
+        display: none;
+    }
+}
+
+.plus-minus__btn, .plus-minus__input {
+    background-color: var(--grey50);
+    border-radius: 8px;
+}
+
+.plus-minus__btn {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.plus-minus__btn_minus {
+    margin-right: 20px;
+}
+
+.plus-minus__btn_plus {
+    margin-left: 20px;
+}
+
+.plus-minus__input {
+    padding: 12px;
+    width: 100%;
+
+    text-align: center;
+    font-family: 'SF Pro Text', sans-serif;
+    font-size: 16px;
+
+    border: 1px solid var(--grey200);
+}
