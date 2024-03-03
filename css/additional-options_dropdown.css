@@ -1,5 +1,8 @@
 .additional-options {
     padding: 0 20px;
+    @media (width >= 1400px) {
+        padding: 0 16px;
+    }
 }
 
 .additional-options__select {
@@ -21,6 +24,20 @@
         width: 12px;
         height: 12px;
         transition: transform .3s ease;
+        stroke: var(--cyan950);
+    }
+
+    &:active {
+        border-color: var(--azureDark);
+        color: var(--azureDark);
+
+        svg {
+            stroke: var(--azureDark);
+        }
+    }
+    
+    @media (width >= 1400px) {
+        display: none;
     }
 }
 
@@ -79,16 +96,34 @@
 
 .additional-options__label {
     position: relative;
-    padding: 12px 32px 12px 40px;
-    display: block;
     width: 100%;
-    background-color: var(--azure150);
+    height: 44px;
+    display: flex;
+    align-items: center;
     border-radius: 8px;
     transform: translateY(0);
-    transition: transform .5s ease;
+    transition-property: transform, background-color;
+    transition-timing-function: ease;
+    transition-duration: .3s;
+    cursor: pointer;
+    overflow: hidden;
 
     &:not(:last-child) {
         margin-bottom: 10px;
+    }
+
+    .background {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        padding: 12px 32px 12px 40px;
+        display: flex;
+        align-items: center;
+
+        font-weight: 600;
+        background-color: var(--azure150);
+
+        transition: background-color .1s ease;
     }
 
     input {
@@ -99,9 +134,59 @@
         opacity: 0;
         cursor: pointer;
     }
+
+    .info__tooltip {
+        margin-left: auto;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .background {
+                background-color: var(--azure550);
+                button svg {
+                    fill: var(--white);
+                }
+            }
+
+            .checkmark {
+                border-color: transparent;
+            }
+        }
+    }
+
+    @media (width >= 1400px) {
+        width: 316px;
+        .background {
+            padding: 13px 17px 12px 40px;
+            letter-spacing: 0.02em;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+
+        max-width: 316px;
+    }
 }
 
 .additional-options__label input:checked ~ .checkmark {
     background-color: var(--azureDark);
     border-color: var(--azureDark);
+}
+
+.additional-options__label input:checked {
+    & + span {
+        background-color: var(--azureDark) !important;
+        color: var(--white);
+
+        button svg {
+            fill: var(--white);
+        }
+    }
+}
+
+@media (width >= 1400px) {
+    .additional-options__title {
+        display: none;
+    }
 }
