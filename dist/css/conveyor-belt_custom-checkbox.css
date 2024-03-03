@@ -4,6 +4,11 @@
 
     @media (width >= 1400px) {
         padding: 0 16px;
+        margin-bottom: 30px;
+
+        .plus-minus__input {
+            max-width: 64px;
+        }
     }
 }
 
@@ -29,6 +34,7 @@
         transform: translateY(-6px);
         .checkmark {
             line-height: 32px;
+            border-radius: 4px;
         }
     }
 }
@@ -57,12 +63,20 @@
 
     @media (width >= 1400px) {
         margin: 6px 0;
+
         &:not(:last-child) {
             margin-right: 12px;
             .checkmark {
                 width: 48px;
                 height: 32px;
-            }}
+            }
+        }
+
+        &:last-child {
+            .checkmark {
+                padding: 0 23px;
+            }
+        }
     }
 }
 

@@ -1,18 +1,61 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-// PRODUCT CARD SLIDER
-    const swiper = new Swiper(".preview__thumbnail", {
+// Swiper initialization for thumbnails
+    const thumbnailSwiper = new Swiper(".preview__thumbnail", {
         spaceBetween: 8,
-        slidesPerView: 4,
-    });
-    new Swiper(".preview__main-photo", {
-        spaceBetween: 0,
-        thumbs: {
-            swiper: swiper,
+        slidesPerView: 5,
+        slidesPerGroup: 1,
+        breakpoints: {
+            // when window width is >= 1400px
+            1400: {
+                navigation: {
+                    nextEl: ".thumb_next",
+                    prevEl: ".thumb_prev",
+                },
+            },
         },
     });
 
-// PLUS MINUS INPUT
+// Swiper initialization for main images
+const swiperMain = new Swiper(".preview__main-photo", {
+        spaceBetween: 0,
+        thumbs: {
+            swiper: thumbnailSwiper,
+        },
+        breakpoints: {
+            // when window width is >= 1400px
+            1400: {
+                navigation: {
+                    nextEl: ".next",
+                    prevEl: ".prev",
+                },
+                pagination: {
+                    el: ".pagination",
+                    type: "custom",
+                    renderCustom: function (swiper, current, total) {
+                        return current + '/' + (total);
+                    }
+                },
+            },
+        },
+        on: {
+            // Event handler when the active index changes
+            activeIndexChange: (e) => {
+                const linkElement = swiperMain.el.querySelector('.preview__zoom');
+                const imageWrapper = swiperMain.slides[swiperMain.activeIndex];
+                if (linkElement && imageWrapper) {
+                    linkElement.href = imageWrapper.dataset.imgBig;
+                }
+            }
+        }
+    });
+
+// Fancybox initialization for zoom image
+    Fancybox.bind("[data-fancybox]", {
+        Images: {
+            initialSize: "fit",
+        }
+    });
+
+// Plus/Minus input
     document.querySelectorAll('[data-quantity]').forEach(button => {
         button.addEventListener('click', incDecHandler);
     });
@@ -50,12 +93,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-//
+// Select additional options
     const selectBtn = document.querySelector('.additional-options__select');
     const selectOptions = document.querySelector('.additional-options__opt');
+    selectOptions.hidden = window.innerWidth < 1400;
+
+    // if you need control resize
+    /* window.addEventListener('resize', () => {
+        selectOptions.hidden = window.innerWidth < 1400;
+    }); */
 
     selectBtn.addEventListener('click', function (){
         this.classList.toggle('is-active');
         selectOptions.hidden = !selectOptions.hidden;
-    })
-})
+    });
