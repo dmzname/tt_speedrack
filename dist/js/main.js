@@ -113,6 +113,7 @@ const tooltips = document.querySelectorAll('.tooltip');
 tooltips.forEach(tooltip => {
     tooltip.addEventListener('click', (e) => {
         const tooltipBox = e.currentTarget.closest('.tooltip');
+        console.log(tooltipBox.getBoundingClientRect());
         if (tooltipBox) {
             e.preventDefault();
             tooltipBox.classList.toggle('is-active');
