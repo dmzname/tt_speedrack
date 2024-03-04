@@ -5,6 +5,10 @@
     }
 }
 
+.additional-options__tooltip {
+    transform: translate(5px, 3px);
+}
+
 .additional-options__select {
     position: relative;
     padding: 13px 40px 13px 15px;
@@ -55,10 +59,10 @@
     transform-origin: top;
     transition: transform .2s ease;
 
-    .checkmark {
+    .checkbox__checkmark {
         position: absolute;
         left: 12px;
-        top: 50%;
+        top: calc(50% + 2px);
         transform: translateY(-50%);
 
         display: inline-block;
@@ -81,7 +85,7 @@
     display: block;
     transform: scaleY(0);
 
-    .additional-options__label {
+    .checkbox {
         &:nth-child(2){
             transform: translateY(-47px);
         }
@@ -94,25 +98,23 @@
     }
 }
 
-.additional-options__label {
+.additional-options__checkbox {
     position: relative;
     width: 100%;
     height: 44px;
     display: flex;
     align-items: center;
-    border-radius: 8px;
     transform: translateY(0);
     transition-property: transform, background-color;
     transition-timing-function: ease;
     transition-duration: .3s;
     cursor: pointer;
-    overflow: hidden;
 
     &:not(:last-child) {
         margin-bottom: 10px;
     }
 
-    .background {
+    .checkbox__background {
         position: absolute;
         inset: 0;
         z-index: -1;
@@ -121,6 +123,7 @@
         align-items: center;
 
         font-weight: 600;
+        border-radius: 8px;
         background-color: var(--azure150);
 
         transition: background-color .1s ease;
@@ -135,20 +138,20 @@
         cursor: pointer;
     }
 
-    .info__tooltip {
+    .tooltip {
         margin-left: auto;
     }
 
     @media (hover: hover) {
         &:hover {
-            .background {
+            .checkbox__background {
                 background-color: var(--azure550);
-                button svg {
+                span svg {
                     fill: var(--white);
                 }
             }
 
-            .checkmark {
+            .checkbox__checkmark {
                 border-color: transparent;
             }
         }
@@ -156,9 +159,8 @@
 
     @media (width >= 1400px) {
         width: 316px;
-        .background {
-            padding: 13px 17px 12px 40px;
-            letter-spacing: 0.02em;
+        .checkbox__background {
+            padding: 13px 13px 12px 40px;
         }
 
         &:not(:last-child) {
@@ -169,17 +171,17 @@
     }
 }
 
-.additional-options__label input:checked ~ .checkmark {
+.additional-options__checkbox input:checked ~ .checkbox__background .checkbox__checkmark {
     background-color: var(--azureDark);
     border-color: var(--azureDark);
 }
 
-.additional-options__label input:checked {
-    & + span {
+.additional-options__checkbox input:checked {
+    & + .checkbox__background {
         background-color: var(--azureDark) !important;
         color: var(--white);
 
-        button svg {
+        span svg {
             fill: var(--white);
         }
     }

@@ -2,9 +2,11 @@
 @import "fonts.css";
 @import "variables.css";
 @import "breadcrumbs.css";
+@import "tooltip.css";
 @import "plus-minus.css";
-@import "conveyor-belt_custom-checkbox.css";
-@import "additional-options_dropdown.css";
+@import "conveyor-belt.css";
+@import "bed-section.css";
+@import "additional-options.css";
 @import "scu-rate.css";
 
 body {
@@ -300,23 +302,6 @@ body {
 .info__details-title {
     margin-bottom: 8px;
     font-weight: 600;
-}
-
-.info__tooltip {
-    transform: translate(5px, 3px);
-
-    svg {
-        width: 16px;
-        height: 16px;
-        fill: var(--grey600);
-        transition: fill .3s ease;
-    }
-
-    &:active {
-        svg {
-            fill: var(--azureDark);
-        }
-    }
 }
 
 .info__bed-section {
