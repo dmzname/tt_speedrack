@@ -12,6 +12,10 @@
     }
 }
 
+.conveyor-belt__tooltip {
+    transform: translate(5px, 3px);
+}
+
 .conveyor-belt__width-wrapper {
     display: flex;
     flex-wrap: wrap;

@@ -107,3 +107,15 @@ const swiperMain = new Swiper(".preview__main-photo", {
         this.classList.toggle('is-active');
         selectOptions.hidden = !selectOptions.hidden;
     });
+
+// Tooltip
+const tooltips = document.querySelectorAll('.tooltip');
+tooltips.forEach(tooltip => {
+    tooltip.addEventListener('click', (e) => {
+        const tooltipBox = e.currentTarget.closest('.tooltip');
+        if (tooltipBox) {
+            e.preventDefault();
+            tooltipBox.classList.toggle('is-active');
+        }
+    });
+});
